@@ -22,6 +22,7 @@ function generateNewTodoItem(title,description,isDone) {
     if(isDone){
         checkBox.click()
     }
+    checkBox.addEventListener("click",checkTodo)
     let para = document.createElement("p")
     para.classList.add("mb-1")
     para.innerHTML = description

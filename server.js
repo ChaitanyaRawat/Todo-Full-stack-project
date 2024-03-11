@@ -17,10 +17,15 @@ io.on("connection" , (socket) => {
     })
     socket.on("send my saved todoItems",async(userNameOfClient) => {
         let userTodos = await todoItem.find({username: userNameOfClient},{_id:0,username:1,title:1,description:1,isDone:1})
+        // console.log(userTodos)
         io.emit("sending your saved todoitems",userTodos)
     })
     socket.on("delete this todo",async(theTodo) => {
         await todoItem.deleteOne({title:theTodo.title,description:theTodo.description})
+        // console.log(theTodo)
+    })
+    socket.on("check this todo",async(theTodo) => {
+        await todoItem.updateOne({title:theTodo.title,description:theTodo.description},{isDone:theTodo.isDone})
         // console.log(theTodo)
     })
 })

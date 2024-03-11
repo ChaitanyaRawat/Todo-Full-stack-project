@@ -140,6 +140,16 @@
             itemToBeDeleted.remove()
             socket.emit("delete this todo", { title: h, description: t })
         }
+
+        function checkTodo(e){
+            let target = e.target
+            let bool = target.checked
+            let itemToBeDeleted = target.parentElement.parentElement.parentElement
+            let h = itemToBeDeleted.children[0].children[0].innerHTML
+            let t = itemToBeDeleted.children[1].innerHTML
+            socket.emit("check this todo", { title: h, description: t ,isDone:bool})
+        }
+
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
