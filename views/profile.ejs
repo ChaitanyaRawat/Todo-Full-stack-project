@@ -51,7 +51,7 @@
                     </p>
                     <div class="d-flex justify-content-center mb-2">
                         <button class="btn btn-outline-success" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" id="mainAddButton" onclick="switchToAddMode(this)">Add</button>
+                            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" id="mainAddButton" onclick="switchToAddMode()">Add</button>
                         <!-- <button type="button" class="btn btn-outline-primary ms-1">Edit</button> -->
                         <button type="button" class="btn btn-outline-danger ms-1" value="0" id="mainDeleteButton"
                             onclick="deleteButton(this)">Delete</button>
@@ -75,7 +75,7 @@
                                             </div>
                                         </div>
                                         <a class="btn btn-primary"
-                                            onclick="generateNewTodoItem(document.getElementById('newTodoTitle').value,document.getElementById('newTodoDescription').value,false),sendNewTodoItem()">Add</a>
+                                            onclick="generateNewTodoItem(document.getElementById('newTodoTitle').value,document.getElementById('newTodoDescription').value,false),sendNewTodoItem(),switchToAddMode()">Add</a>
                                     </form>
                                 </div>
                             </div>

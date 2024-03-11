@@ -57,7 +57,7 @@ function deleteButton(target){
     }
 }
 
-function switchToAddMode(target){
+function switchToAddMode(){
     let arr1 = document.getElementsByClassName("individual-delete-btn")
     let arr2 = document.getElementsByClassName("individual-check-btn")
     let deleteBtn = document.getElementById("mainDeleteButton")
