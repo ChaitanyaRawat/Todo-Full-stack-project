@@ -57,5 +57,15 @@ function deleteButton(target){
     }
 }
 
-
+function switchToAddMode(target){
+    let arr1 = document.getElementsByClassName("individual-delete-btn")
+    let arr2 = document.getElementsByClassName("individual-check-btn")
+    let deleteBtn = document.getElementById("mainDeleteButton")
+    let size = arr1.length
+    deleteBtn.innerHTML = "Delete"
+    for(let i = 0;i<size;i++){
+        arr2[i].style.display = "inline"
+        arr1[i].style.display = "none"
+    }
+}
 
